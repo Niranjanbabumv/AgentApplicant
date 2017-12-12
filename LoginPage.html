@@ -1,0 +1,57 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script src="app.js"></script>
+<title>Login Page</title>
+<style>
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+#mainBox {
+  position: absolute;
+  width: 250px;
+  height: 280px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  border: 1px solid black;
+}
+</style>
+</head>
+<body ng-app = "myModule">
+	<div id = "mainBox" ng-controller = "myController">
+		<br>
+		<div>
+			&nbsp;&nbsp;<img ng-src = "{{loginIcon.loginPngLoc}}" alt = "{{loginIcon.name}}" style = "height:20px; width:30px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size= "5"><b><i>{{loginIcon.message}}</i></b></font>
+		</div>
+		<br>
+		<br>
+		<div style="position:absolute; left: 20px;">
+			&nbsp;&nbsp;<b>User Name :</b><br>
+			&nbsp;&nbsp;<input type="text" id="userName" ng-model="userName">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div style="position:absolute; left: 20px;">
+			&nbsp;&nbsp;<b>Password :</b><br>
+			&nbsp;&nbsp;<input type="password" id="password" ng-model="password">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div style="position:absolute; left: 90px;">
+			&nbsp;&nbsp;<input type="submit" value="Login" ng-click="submitLoginData()">
+		</div>
+		<br>
+	</div>
+</body>
+</html>

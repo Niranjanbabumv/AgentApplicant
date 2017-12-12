@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="app.js"></script>
+	<style>
+		.mainBox {
+		  position: absolute;
+		  left: 70px;
+		  width: 1200px;
+		  height: 500px;
+		  border: 1px solid black;
+		}
+		.insideBox {
+		  position:absolute;
+		  left: 40px; 
+		  width: 1100px;
+		  border: 1px solid black;
+		}	
+	</style>
+</head>
+<body ng-app = "myModule">
+	<div class="mainBox">
+	<br><br><br>
+	<hr />
+	<p style="font-family: cursive;font-style: normal;font-size: x-large; padding-left:40px;">Apply for Digital Identification</p>
+	<p style="padding-left:40px;"><b>Don't have ?</b> <i style="font-size: medium;">Fill all the details and we will mail you the Digital Identification number in your mailbox.</i></p>
+		<div class = "insideBox" ng-controller = "myController">
+			<p style="font-family: cursive;font-style: normal;font-size: x-large;" align="center"><img ng-src = "{{successIcon.successPngLoc}}" alt = "{{successIcon.name}}" width="30" height="20">&nbsp;&nbsp;Success</p>
+			<p style="font-family: cursive;font-style: normal;font-size: medium;" align="center">You have successfully applied for it. Please check your mailbox to know your</p>
+			<p style="font-family: cursive;font-style: normal; font-size: medium;" align="center">Digital Identification Number</p>
+			<p align="center"><input type="button" value="OK" id="Ok" ng-click = "successEntry()"></p>
+			<br>
+			<br>
+		</div>
+	</div>	
+</body>
+</html>
